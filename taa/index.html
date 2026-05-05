@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="icon" type="image/png" href="/91ac6d4c-7d63-4f2b-894b-3b77324a94eb.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Studio de Unhas</title>
+<meta name="description" content="Manicure profissional, unhas perfeitas, alongamento, esmaltação e cuidados completos para suas mãos.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f0f0f;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15,15,15,0.9);
+    backdrop-filter:blur(10px);
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+    border-bottom:1px solid #ff919f;
+}
+
+/* NAV */
+nav{
+    z-index: 1;
+    position:fixed;
+    top:70px;
+    width:100%;
+    background:#111;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    transition:.3s;
+    
+}
+
+nav a:hover{
+    color:#ff919f;
+}
+
+/* ESPAÇO */
+.spacer{height:120px}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:url(ChatGPT\ Image\ 2\ de\ mai.\ de\ 2026\,\ 23_27_45.png) center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h2{font-size:42px;
+color: #ffffff;
+-webkit-text-stroke: 2px #000000;
+}  
+
+.hero p{opacity:1;margin-top:10px;
+    color: #ffffff;
+     -webkit-text-stroke: 1px #000000;
+     font-size: 20px;
+}
+
+/* BOTÃO */
+.cta{
+    margin-top:20px;
+    padding:15px 30px;
+    background:linear-gradient(45deg,#ff919f,#ffbdbd);
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+     border:2px solid #000000;
+}
+
+.cta:hover{transform:scale(1.05);
+     
+ border:2px solid #ff919f;
+ color: #ff6478;
+    -webkit-text-stroke: 1px #ffd4dd;
+    background:linear-gradient(45deg,#000000,#464646);
+}
+
+/* SEÇÕES */
+section{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:#1c1c1c;
+    padding:25px;
+    width:250px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border:1px solid #ff919f;
+}
+
+/* GALERIA */
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.galeria img{
+    width:200px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.08);
+    border:1px solid #ff919f;
+}
+
+/* SIMULADOR */
+.simulador{
+    background:#1c1c1c;
+    padding:30px;
+    border-radius:15px;
+    max-width:400px;
+    margin:auto;
+    border:1px solid #ff919f;
+}
+
+select, button{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    background:#ff919f;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.resultado{
+    margin-top:10px;
+    font-size:18px;
+    
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    padding:30px;
+    border-top:1px solid #ff919f;
+}
+
+/* BOTÕES FIXOS */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    padding:14px;
+    padding-bottom: 5px;
+    padding-top: 14px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
+    transition:.3s;
+     border:2px solid #ff919f;
+}
+
+.whatsapp:hover{transform:scale(1.1)}
+.instagram:hover{transform:scale(1.1)}
+.instagram{
+    position:fixed;
+    bottom:99px;
+    right:20px;
+    background:#fbc7ff;
+    padding:7px;
+      padding-bottom: 2px;
+    padding-top: 7px;
+    border-radius:50%;
+    text-decoration:none;
+     transition:.3s;
+     border:2px solid #ff919f;
+}
+.header-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+   
+}
+
+/* LOGO */
+.logo{
+ border:1px solid #ff919f;
+    border-radius: 100%;
+    position:absolute;
+    left:55px;
+    top: 0px;
+    height:100px;
+    object-fit:contain;
+}
+/* RESPONSIVIDADE */
+@media (max-width: 768px){
+
+    header h1{
+        font-size:20px;
+    }
+
+    .logo{
+        position:static;
+        height:70px;
+        margin-top:10px;
+    }
+
+    nav{
+        top:110px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px 10px;
+        font-size:14px;
+    }
+
+    .hero h2{
+        font-size:26px;
+        -webkit-text-stroke: 1px #000;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .cta{
+        padding:12px 20px;
+        font-size:14px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    .galeria img{
+        width:90%;
+    }
+
+    section{
+        padding:50px 15px;
+    }
+
+    .spacer{
+        height:150px;
+    }
+
+    .whatsapp{
+        bottom:15px;
+        right:15px;
+    }
+
+    .instagram{
+        bottom:80px;
+        right:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Studio de Unhas</h1>
+      <img src="91ac6d4c-7d63-4f2b-894b-3b77324a94eb.png" class="logo" alt="Logo">
+</header>
+
+<nav>
+<a href="#">Início</a>
+<a href="#servicos">Serviços</a>
+<a href="#galeria">Trabalhos</a>
+<a href="#sobre">Sobre</a>
+</nav>
+
+<div class="spacer"></div>
+
+<section class="hero">
+<h2>Unhas impecáveis, autoestima lá em cima</h2>
+<p>Cuidado, beleza e estilo em cada detalhe</p>
+
+<a href="https://wa.me/31986847328" class="cta">Agendar horário</a>
+</section>
+
+<section id="servicos">
+<h2>Serviços</h2>
+
+<div class="cards">
+<div class="card"><h3>Manicure Tradicional</h3><p>Limpeza completa e esmaltação perfeita</p></div>
+
+<div class="card"><h3>Esmaltação em Gel</h3><p>Mais durabilidade e brilho intenso</p></div>
+
+<div class="card"><h3>Alongamento de Unhas</h3><p>Unhas longas e resistentes com acabamento natural</p></div>
+
+<div class="card"><h3>Fibra de Vidro</h3><p>Técnica moderna para alongamento elegante</p></div>
+
+<div class="card"><h3>Blindagem</h3><p>Proteção extra para suas unhas naturais</p></div>
+
+<div class="card"><h3>Nail Art</h3><p>Decorações exclusivas e personalizadas</p></div>
+
+<div class="card"><h3>Manutenção</h3><p>Correção e cuidado para manter suas unhas sempre lindas</p></div>
+
+<div class="card"><h3>Remoção</h3><p>Remoção segura sem danificar suas unhas</p></div>
+
+<div class="card"><h3>Pedicure</h3><p>Cuidados completos para pés bem tratados</p></div>
+</div>
+</section>
+
+<section id="galeria">
+<h2>Resultados reais</h2>
+
+<div class="galeria">
+<img src="18-Modelos-de-Esmaltes-e-Unhas-com-Flores-lindas1.jpg">
+<img src="OIP (1).jpg">
+<img src="OIP (2).jpg">
+<img src="OIP.jpg">
+<img src="unhas-em-gel-decoradas-5.jpg">
+</div>
+</section>
+
+<section id="sobre">
+<h2>Sobre</h2>
+<p>Somos especialistas em cuidados com as unhas, oferecendo serviços modernos e de alta qualidade para realçar sua beleza e autoestima.
+
+Trabalhamos com técnicas atualizadas, materiais de primeira linha e total atenção aos detalhes para garantir um resultado impecável.
+
+Aqui, cada atendimento é único — pensado para valorizar seu estilo e proporcionar uma experiência confortável e profissional.</p>
+</section>
+
+<footer>
+<p>© 2026 - Studio de Unhas</p>
+</footer>
+
+<a href="https://wa.me/31986847328" class="whatsapp">
+<img src="logo-whatsapp-png-transparente.webp" height="40px">
+</a>
+
+<a href="https://instagram.com" class="instagram">
+<img src="instagram-logo-instagram-icon-transparent-free-png.webp" height="50px">
+</a>
+
+</body>
+</html>
