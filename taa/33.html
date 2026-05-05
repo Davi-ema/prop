@@ -246,23 +246,71 @@ footer{
     object-fit:contain;
 }
 /* RESPONSIVIDADE */
-@media(max-width:768px){
+@media (max-width: 768px){
 
-      .logo{
+    header h1{
+        font-size:20px;
+    }
+
+    .logo{
+        position:static;
         height:70px;
         margin-top:10px;
-        margin-left: 190%;
-    }
-    header{
-        flex-direction:column;
     }
 
     nav{
-        margin-top:10px;
+        top:110px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px 10px;
+        font-size:14px;
     }
 
     .hero h2{
         font-size:26px;
+        -webkit-text-stroke: 1px #000;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .cta{
+        padding:12px 20px;
+        font-size:14px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    .galeria img{
+        width:90%;
+    }
+
+    section{
+        padding:50px 15px;
+    }
+
+    .spacer{
+        height:150px;
+    }
+
+    .whatsapp{
+        bottom:15px;
+        right:15px;
+    }
+
+    .instagram{
+        bottom:80px;
+        right:15px;
     }
 }
 </style>
@@ -272,7 +320,7 @@ footer{
 
 <header>
     <h1>Studio de Unhas</h1>
-      <img src="ChatGPT Image 2 de mai. de 2026, 23_15_03.png" class="logo" alt="Logo">
+      <img src="91ac6d4c-7d63-4f2b-894b-3b77324a94eb.png" class="logo" alt="Logo">
 </header>
 
 <nav>
